@@ -16,16 +16,13 @@ class QuizQuestion extends Component {
                 </section>
                 <section className='buttons'>
                     <ul>
-                        {
-                            answer
-                        }
+                        { answer }
                     </ul>
                 </section>
             </main>
         );
     }
 }
-
 QuizQuestion.propTypes = {
     quiz_question: PropTypes.object
 };
