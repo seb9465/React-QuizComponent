@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class QuizQuestion extends Component {
-    
-    render () {
+
+    render() {
         return (
             <main>
                 <section>
-                    <p> { this.props.quizQuestion.instruction_text } </p>
+                    <p> {this.props.quizQuestion.instruction_text} </p>
                 </section>
                 <section className='buttons'>
                     <ul>
-                        <li>{ this.props.quizQuestion.answer_options[0] }</li>
+                        <li>{this.props.quizQuestion.answer_options[0]}</li>
                     </ul>
                 </section>
             </main>
         );
     }
+}
+
+QuizQuestion.propTypes = {
+    quizQuestion : PropTypes.obj
 }
 
 export default QuizQuestion;
