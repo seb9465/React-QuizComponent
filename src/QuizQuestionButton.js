@@ -15,8 +15,8 @@ class QuizQuestionButton extends Component {
         );
     }
 }
-QuizQuestionButton.PropTypes = {
-    button_text: PropTypes.obj
+QuizQuestionButton.propTypes = {
+    button_text: PropTypes.string
 }
 
 export default QuizQuestionButton;

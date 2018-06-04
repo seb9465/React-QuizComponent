@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
 
 class QuizEnd extends Component {
     constructor (props) {
@@ -15,9 +14,6 @@ class QuizEnd extends Component {
             </div>
         );
     }
-}
-QuizEnd.PropTypes = {
-
 }
 
 export default QuizEnd;
