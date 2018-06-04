@@ -18,7 +18,7 @@ class Quiz extends Component {
         return (
             <div>
                 <div className="QuizQuestion">
-                    <QuizQuestion quizQuestion={ data.quiz_questions[this.state.quiz_position - 1] }/>
+                    <QuizQuestion quiz_question={ data.quiz_questions[this.state.quiz_position - 1] }/>
                 </div>
             </div>
         );
