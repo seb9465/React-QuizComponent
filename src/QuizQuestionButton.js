@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 class QuizQuestionButton extends Component {
     constructor (props) {
@@ -8,9 +9,14 @@ class QuizQuestionButton extends Component {
 
     render () {
         return (
-            <div />
+            <li>
+                <button>{this.props.button_text}</button>
+            </li>
         );
     }
+}
+QuizQuestionButton.PropTypes = {
+    button_text: PropTypes.obj
 }
 
 export default QuizQuestionButton;
