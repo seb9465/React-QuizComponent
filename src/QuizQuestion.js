@@ -5,9 +5,13 @@ import QuizQuestionButton from './QuizQuestionButton';
 
 class QuizQuestion extends Component {
 
+    handleClick (buttonText) {
+
+    }
+
     render() {
         const answer = this.props.quiz_question.answer_options.map((answer_option, index) => {
-            return <QuizQuestionButton key={index} button_text={answer_option} />
+            return <QuizQuestionButton key={index} clickHandler={this.handleClick.bind(this)} button_text={answer_option} />
         });
         return (
             <main>
