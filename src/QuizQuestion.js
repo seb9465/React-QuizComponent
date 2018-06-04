@@ -28,7 +28,8 @@ class QuizQuestion extends Component {
     }
 }
 QuizQuestion.propTypes = {
-    quiz_question: PropTypes.object
+    quiz_question: PropTypes.object,
+    showNextQuestionHandler: PropTypes.func
 };
 
 export default QuizQuestion;

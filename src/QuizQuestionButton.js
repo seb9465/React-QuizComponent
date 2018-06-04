@@ -20,7 +20,8 @@ class QuizQuestionButton extends Component {
     }
 }
 QuizQuestionButton.propTypes = {
-    button_text: PropTypes.string
+    button_text: PropTypes.string,
+    clickHandler: PropTypes.func
 };
 
 export default QuizQuestionButton;
