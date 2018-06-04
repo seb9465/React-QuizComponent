@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import QuizQuestionButton from './QuizQuestionButton';
 
 class QuizQuestion extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -12,12 +12,12 @@ class QuizQuestion extends Component {
         };
     }
 
-    handleClick (buttonText) {
+    handleClick(buttonText) {
         if (buttonText === this.props.quiz_question.answer) {
             this.props.showNextQuestionHandler();
-            this.setState( () => { return {incorrectAnswer: false}});
+            this.setState(() => { return { incorrectAnswer: false } });
         } else {
-            this.setState( () => { return {incorrectAnswer: true}});
+            this.setState(() => { return { incorrectAnswer: true } });
         }
     }
 
@@ -25,6 +25,9 @@ class QuizQuestion extends Component {
         const answer = this.props.quiz_question.answer_options.map((answer_option, index) => {
             return <QuizQuestionButton key={index} clickHandler={this.handleClick.bind(this)} button_text={answer_option} />
         });
+
+        const incorrectAnswer = this.state.incorrectAnswer ? (<p className="error">Sorry, that's not right</p>) : null;
+
         return (
             <main>
                 <section>
@@ -35,6 +38,7 @@ class QuizQuestion extends Component {
                         { answer }
                     </ul>
                 </section>
+                { incorrectAnswer }
             </main>
         );
     }
